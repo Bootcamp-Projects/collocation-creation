@@ -1,0 +1,86 @@
+#toggle-mode-cb {
+    display: none;
+  }
+  
+  #toggle-mode {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+  }
+  #toggle-mode .toggle-border {
+    border: 1px solid #1e1f26;
+    width: 50px;
+    height: 20px;
+    display: block;
+    border-radius: 20px;
+    position: relative;
+  }
+  #toggle-mode .toggle-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #1e1f26;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  #toggle-mode .toggle-indicator::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3px;
+    right: 5px;
+    background-color: #1e1f26;
+  }
+  
+  #mode-wrapper {
+    transition: all 0.3s ease-in-out;
+    height: 100vh;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 2rem;
+  }
+  #mode-wrapper .mode {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #mode-wrapper {
+    background-color: white;
+    color: #1e1f26;
+  }
+  #mode-wrapper .mode__light {
+    opacity: 1;
+  }
+  #mode-wrapper .mode__dark {
+    opacity: 0;
+  }
+  
+  #toggle-mode-cb:checked + #mode-wrapper {
+    background-color: #1e1f26;
+    color: gray;
+  }
+  #toggle-mode-cb:checked + #mode-wrapper .mode__light {
+    opacity: 0;
+  }
+  #toggle-mode-cb:checked + #mode-wrapper .mode__dark {
+    opacity: 1;
+  }
+  #toggle-mode-cb:checked + #mode-wrapper .toggle-border {
+    border-color: white;
+  }
+  #toggle-mode-cb:checked + #mode-wrapper .toggle-indicator {
+    background-color: white;
+    left: calc( 50px - 18px );
+    transform: rotate(180deg);
+  }
+  
