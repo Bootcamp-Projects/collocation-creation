@@ -15,6 +15,10 @@ h1 {
     float: left;
 }
 
+.row {
+    margin: 0 45px;
+}
+
 
 .input-group {
     width: 50%;
@@ -23,9 +27,28 @@ h1 {
     
 }
 
+.section-main {
+    border-right: 1px solid red;
+}
+
 .card {
     background: none;
     color: 141414;
-    border: 1px solid #141414;
+    /* border: 1px solid #141414; */
     padding: 30px;
+    border-radius: 0;
+    border: none;
+}
+
+.container {
+    border-top: 1px solid #000000;
+}
+
+
+
+@media (min-width: 992px) {
+.container {
+    max-width: 100%;
+
+}
 }
