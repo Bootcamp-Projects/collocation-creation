@@ -1,6 +1,27 @@
-body {
-    background-color: #ffffff;
-}
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+    /* the background color */
+    background-color: #000000;
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
+
+
+
 
 h1 {
     color: white;
@@ -22,9 +43,15 @@ h1 {
 
 .input-group {
     width: 50%;
-    margin: 30px auto;
+    padding-top:300px;
+    margin: 0 auto;
     background: none ;
     
+}
+
+.input-group-text {
+    padding:none;
+    border:none;
 }
 
 .section-main {
@@ -41,7 +68,7 @@ h1 {
 }
 
 .container {
-    border-top: 1px solid #000000;
+    border-top: 1px solid #ffffff;
 }
 
 
