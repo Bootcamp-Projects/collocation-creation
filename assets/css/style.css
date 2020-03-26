@@ -2,11 +2,28 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 200;
   }
   
+
+  h2 {
+      color: white;
+      margin-bottom: 20px;
+  }
+
+  h6 {
+    color: rgba(255, 255, 255, 0.132);
+    font-family: 'Sarabun', sans-serif;
+    font-style: italic;
+  }
+
+  .nav {
+      background-color: #141414;
+  }
   .bg {
     /* the background color */
-    background-color: #000000;
+    background-color: #141414;
   
     /* Full height */
     height: 100%; 
@@ -41,9 +58,16 @@ h1 {
 }
 
 
+.search {
+    padding-top:150px;
+}
+
+.search h6 {
+    text-align: center;
+}
+
 .input-group {
     width: 50%;
-    padding-top:300px;
     margin: 0 auto;
     background: none ;
     
@@ -52,7 +76,22 @@ h1 {
 .input-group-text {
     padding:none;
     border:none;
+    
 }
+
+.form-control {
+    background: none;
+}
+
+.form-control:focus {
+    background: none;
+}
+
+.input-group-lg>.form-control{
+    border-radius: 2rem;
+}
+
+
 
 .section-main {
     border-right: 1px solid red;
