@@ -9,25 +9,51 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/night-mode.css">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Sarabun:300,400,500&display=swap" rel="stylesheet">
+  </head>
 <body>
 
     <!-- Nav -->
-    <nav class="navbar navbar-dark bg-dark">
-      <nav class="navbar navbar-dark bg-light">
-        <img src="assets/images/logo-dark.png" class="logo">
+    <nav class="navbar navbar-dark nav">
+      <nav class="navbar navbar-dark">
+        <img src="assets/images/logo.png" class="logo">
     </nav>
-      </nav>
+    <label class="switch">
+      <input class="switch__input" type="checkbox">
+      <span class="switch__background">
+        <span class="switch__toggle">
+          <span class="switch__moon"></span>
+        </span>
+        <span class="switch__stars"></span>
+        <span class="switch__clouds"></span>
+      </span>
+    </label>
+    </nav>
 
-      <input type="checkbox" id="toggle-mode-cb" />
+    <!-- <input type="checkbox" id="toggle-mode-cb" /> -->
 
     
       <!--Hero Section-->
+
       <div class="bg">
-        <div class="input-group input-group-lg">
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="daily-word">
+          <h6>word of the day</h6>
+          <h2 href="#">night</h2>
+          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat.”</p>
         </div>
       </div>
+      <div class="col-sm-12 search">
+        <h6 class="validation" id="validation">please press enter to search</h6>
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="type your word here" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
 
     <!--Night Mode Toggle-->
     <!-- <div id="mode-wrapper">
