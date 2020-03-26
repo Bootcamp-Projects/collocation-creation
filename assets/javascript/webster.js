@@ -2,8 +2,10 @@
 
 
 $(document).ready(function() {
-  $(".input-group-text").click(function(event) {
-    $(".form-control").keypress();
+  $(".input-group-text").on("keypress", function(event) {
+    if(e.which !== 13){
+      alert("please press enter")
+    }
 
     event.preventDefault();
     $(this).remove(".card-title");
@@ -33,7 +35,15 @@ $(document).ready(function() {
 
         for (var i=0; i < 4; i++){
             console.log(i)
-        }
+
+            for (var i = 0; i < 4; i++) {
+              console.log(el[i])
+
+              if (el[i].fl == noun) {
+                  
+              } 
+          };
+        };
       
     });
   });
