@@ -4,6 +4,7 @@ body, html {
     margin: 0;
     font-family: 'Sarabun', sans-serif;
     font-weight: 200;
+    color: #dddddd;
   }
   
 
@@ -13,7 +14,7 @@ body, html {
   }
 
   h6 {
-    color: rgba(255, 255, 255, 0.132);
+    color: rgba(255, 255, 255, 0.25);
     font-family: 'Sarabun', sans-serif;
     font-style: italic;
   }
@@ -21,6 +22,23 @@ body, html {
   .nav {
       background-color: #141414;
   }
+
+  .results {
+      margin-top: 30px;
+      border-top: .05em solid #ffffff;
+
+  }
+ 
+.input-field { 
+    width: 100%; 
+    padding: 10px; 
+    text-align: center; 
+} 
+
+  .card-body {
+      margin-top:30px;
+  }
+
   .bg {
     /* the background color */
     background-color: #141414;
@@ -67,9 +85,10 @@ h1 {
 }
 
 .input-group {
-    width: 50%;
+    width:100%;
     margin: 0 auto;
     background: none ;
+    max-width: 500px;
     
 }
 
@@ -106,9 +125,9 @@ h1 {
     border: none;
 }
 
-.container {
+/* .container {
     border-top: 1px solid #ffffff;
-}
+} */
 
 
 
