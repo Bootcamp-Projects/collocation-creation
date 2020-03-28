@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     // collocation API js code
     var pronSettings = {
         "async": true,

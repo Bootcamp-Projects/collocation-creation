@@ -4,17 +4,24 @@ body, html {
     margin: 0;
     font-family: 'Sarabun', sans-serif;
     font-weight: 200;
-    color: #dddddd;
+    color: #000000;
   }
   
 
-  h2 {
+  .heading-white {
       color: white;
       margin-bottom: 20px;
   }
 
+  
+  svg.svg-inline--fa.fa-volume-up.fa-w-18.sound {
+    float: right;
+    position: relative;
+    top: -35px;
+}
+
   h6 {
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.9);
     font-family: 'Sarabun', sans-serif;
     font-style: italic;
   }

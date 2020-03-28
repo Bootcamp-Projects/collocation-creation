@@ -45,7 +45,7 @@
         <div class="col-sm-8">
           <div id="daily-word">
             <h6>word of the day</h6>
-            <h2 id="wotd" href="#">night</h2>
+            <h2 class="heading-white" id="wotd" href="#">night</h2>
             <p id="wotd-def">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
               hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus
@@ -58,7 +58,7 @@
       <div class="col-sm-12 search">
         <h6 class="validation" id="validation">please press enter to search</h6>
         <div class="input-group input-group-lg">
-            <input type="text" class="form-control" placeholder="type your word here" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            <input type="text" id="word-input" class="form-control" placeholder="type your word here" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
         </div>
         </div>
       </div>
@@ -67,22 +67,21 @@
  <div class="container results">
   <div class="row">
     <div class="col-sm-8">
-      <div class="card-body">
+      <div class="card-body" id="def-coll">
         <h6 class="type" id="type">noun</h6>
-        <h5 class="card-title" id="def"></h5>
         <p class="card-text" id="def-result"></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="card-body">
-        <h5 class="card-title" id="syn">Synonyms</h5>
-        <p class="card-text" id="syn-result"></p>
+        <h5 class="card-title" id="phrase">Phrasal Words</h5>
+        <p class="card-text" id="phrase-result"></p>
       </div>
     </div>
     <div class="col-sm">
       <div class="card-body">
         <h5 class="card-title" id="collocation">Collocations</h5>
-        <p class="card-text" id="collocation-result"></p>
+        <ul class="card-text" id="collocation-result"></ul>
       </div>
     </div>
   </div>
