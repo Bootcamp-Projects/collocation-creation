@@ -1,12 +1,13 @@
 $(document).ready(function() {
-
   $("#word-input").on("keypress", function(event) {
     if (event.which === 13) {
       event.preventDefault();
       $("#def-coll").empty();
       $("#collocation-result").empty();
-      $([document.documentElement,document.body]).animate({scrollTop: $("#collocation").offset().top}, 800);
-      
+      $([document.documentElement, document.body]).animate(
+        { scrollTop: $("#collocation").offset().top },
+        800
+      );
 
       var wordSearch = $("#word-input")
         .val()
@@ -23,9 +24,7 @@ $(document).ready(function() {
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        console.log(response)
         var el = response;
-        
 
         // Access the sound URL from the API
         var audio_link = `https://media.merriam-webster.com/soundc11/${wordSearch[0]}/${el[0].hwi.prs[0].sound.audio}.wav`;
@@ -40,10 +39,7 @@ $(document).ready(function() {
           `
         );
 
-
         for (var i = 0; i < 4; i++) {
-        
-        
           // Loop through the different parts of speech
           if (
             el[i].fl === "noun" ||
@@ -52,8 +48,6 @@ $(document).ready(function() {
             el[i].fl === "adverb"
           ) {
             if (el[i].meta.stems[0] === wordSearch) {
-              
-
               $("#def-coll").append(
                 `<p class="card-text">${i + 1}. ${el[i].shortdef[0]}</p>`
               );
@@ -61,17 +55,14 @@ $(document).ready(function() {
           }
         }
 
-        for (var i = 0; i < 10; i++) {
-
-
-        };
-
+        for (var i = 0; i < 10; i++) {}
       });
 
       var APIkey = "d3749e9e16msh9f34dc06d606f25p158454jsn2925b80b7492";
       var collocationQueryURL =
-        "https://linguatools-english-collocations.p.rapidapi.com/bolls/?lang=en&query=" + wordSearch;
-    
+        "https://linguatools-english-collocations.p.rapidapi.com/bolls/?lang=en&query=" +
+        wordSearch;
+
       $.ajax({
         url: collocationQueryURL,
         method: "GET",
@@ -82,22 +73,37 @@ $(document).ready(function() {
           "x-rapidapi-key": APIkey
         }
 
-      // Adding collocations to page
+        // Adding collocations to page
       }).then(function(response) {
-        console.log(response)
-        for (var i = 0; i < 10; i++ ) {
+        for (var i = 0; i < 10; i++) {
           var li = $("#collocation-result").append(`<li></li>`);
-        
+
           $(li).append(`<h5>${response[i].collocation}</h5>`);
 
-          response[i].examples.forEach(function(val){
-
+          response[i].examples.forEach(function(val) {
             $(li).append(`<p>${val}</p>`);
-          })
-         
+          });
         }
-  
       });
+
+      var thesQueryURL = "https://www.dictionaryapi.com/api/v3/references/thesaurus/json/" +
+      wordSearch +
+      "?key=234573cf-2356-4739-8b92-491ef64e1cbd";
+
+      $.ajax({
+        url: thesQueryURL, 
+        method: "GET"
+      }).then(function(response){
+        // console.log(response)
+        for (var s = 0; s < 10; s++) {
+          var lt = response;
+
+          $("#synonyms-result").append(
+            `<p class="card-text">${s + 1}. ${lt[s].meta.syns[0]}</p>`
+          )
+        }
+      });
+      
     }
   });
 
