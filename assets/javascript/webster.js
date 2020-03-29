@@ -4,6 +4,7 @@ $(document).ready(function() {
       event.preventDefault();
       $("#def-coll").empty();
       $("#collocation-result").empty();
+      $("#synonyms-result").empty();
       $([document.documentElement, document.body]).animate(
         { scrollTop: $("#collocation").offset().top },
         800
@@ -95,11 +96,11 @@ $(document).ready(function() {
         method: "GET"
       }).then(function(response){
         // console.log(response)
-        for (var s = 0; s < 10; s++) {
+        for (var s = 0; s < 1; s++) {
           var lt = response;
 
           $("#synonyms-result").append(
-            `<p class="card-text">${s + 1}. ${lt[s].meta.syns[0]}</p>`
+            `<p class="card-text word-click col-sm-4 p0">${lt[s].meta.syns[0]}</p>`
           )
         }
       });
