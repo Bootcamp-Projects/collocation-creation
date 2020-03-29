@@ -11,6 +11,11 @@ body {
       color: white;
   }
 
+  .word-click {
+      color:rgb(86, 185, 224);
+      padding-left: 0;
+      font-size: 18px;
+  }
 
   h1 {
     color: white;
