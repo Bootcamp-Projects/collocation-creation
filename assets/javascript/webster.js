@@ -79,8 +79,13 @@ $(document).ready(function() {
         // Adding collocations to page
       }).then(function(response) {
 
-        $("#collocation").append(
-          `<h3>${"Collocations"}</h3>`
+        $("#expander").append(
+          `<div class="card-header">
+          <h3">${"Collocations"}</h3>
+          <button class="btn btn-link plus collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fas fa-plus"></i>
+          </button>
+          </div>`
         );
 
         for (var i = 0; i < 10; i++) {

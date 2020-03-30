@@ -1,10 +1,14 @@
 
 body {
-    height: 100%;
     margin: 0;
     font-family: 'Sarabun', sans-serif;
     font-weight: 200;
-    color: #000000;
+    color: #34323d;
+    background: #34323d;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 30px 30px;
+
+
   }
   
   #wotd-def{
@@ -41,9 +45,9 @@ h5 {
 }
 
 h6 {
-    color: #000000;
     font-family: 'Sarabun', sans-serif;
-    font-style: italic;
+    /* font-style: italic; */
+    font-weight:100;
     
 }
 
@@ -56,7 +60,7 @@ h6 {
 }
 
 .navbar {
-    padding: 30px;
+    padding: 0px 30px;
     width: 100%;
     margin: 30px 40px;
 }
@@ -81,10 +85,6 @@ h6 {
     top: -35px;
 }
 
- 
-  /* .nav {
-      background-color: #34323D;
-  } */
 
   #collapseOne {
     padding: 0px 30px;
@@ -92,16 +92,18 @@ h6 {
   }
 
   .card-header {
-    padding: .75rem 1.25rem;
+    padding: 1.5rem 1.25rem;
     margin-bottom: 0;
     border: 1px solid rgb(86, 185, 224);
     text-decoration: none;
     border-radius: 10px;
     background: none;
+    border-bottom: 1px solid  rgb(86, 185, 224);
   }
 
   .plus {
       float: right;
+      margin: -25px;
   }
   
   .left, p.card-text, h2.card-title {
@@ -129,10 +131,11 @@ h6 {
 
 
 
-/*//// SEARCH INPUT ////////*/
+/*//// Search Input ////////*/
 
 .search {
-    padding-top:40px;
+    padding-top:90px;
+    padding-bottom: 40px;
 }
 .input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child){
     border-radius: 3em;
@@ -153,7 +156,7 @@ input#word-input {
 }
 
 .input-group {
-    width:100%;
+    width:90%;
     margin: 0 auto;
     background: none ;
     max-width: 500px;
@@ -185,19 +188,16 @@ input#word-input {
 }
 
 #validation {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    padding-top: 80px;
 }
 
 /*///////////////////////////////*/
 
-.section-main {
-    border-right: 1px solid red;
-}
 
 .card {
     background: none;
     color: 141414;
-    /* border: 1px solid #141414; */
     padding: 30px;
     border-radius: 0;
     border: none;
@@ -210,9 +210,24 @@ input#word-input {
 
 
 
-@media (min-width: 992px) {
+@media (max-width: 768px) {
 .container {
     max-width: 100%;
 
 }
+
+.navbar {
+    margin: 30px 0;
+    padding-right: 0;
+    padding-top: 13px;
+}
+
+.cls-5 {
+    font-size: 0px;
+    font-family: HiraMinProN-W3-83pv-RKSJ-H,
+    Hiragino Mincho ProN;
+}
+
+
+
 }

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <title>Collocation Creation</title>
+    <link rel="icon" type="image/png" href="assets/images/cc-favicon.png"/>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link
       rel="stylesheet"
@@ -32,7 +32,6 @@
   </head>
   <body>
     <!-- Nav -->
-
     <input type="checkbox" id="switch" />
     <div class="app">
       <div class="body">
@@ -65,8 +64,8 @@
                     }
                     .cls-5 {
                       font-size: 24px;
-                      font-family: HiraMinProN-W3-83pv-RKSJ-H,
-                        Hiragino Mincho ProN;
+                      font-family: 'Sarabun', sans-serif;
+                      font-weight: 400;
                     }
                     .cls-6 {
                       clip-path: url(#clip-path-3);
@@ -136,7 +135,6 @@
               </div>
             </label>
           </div>
-          <!-- <p class="heading">Choose a style</p> -->
 
           <!--Search bar-->
           <div class="col-sm-12 search">
@@ -174,27 +172,26 @@
                   <!-- <ul class="card-text left" id="collocation-result"></ul> -->
                 </div>
               </div>
-              <div class="col-sm-4">
+              <!-- <div class="col-sm-4">
                 <div class="card-body">
                   <h5 class="card-title left" id="recent">Recent Search</h5>
                   <p class="card-text left" id="recent-result"></p>
                 </div>
-              </div>
+              </div> -->
             </div>
             
 
             <div class="accordion" id="accordionExample">
               <div class="col-sm-12">
               <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
+                <div id="expander"> 
+                  <!-- class="card-header"  -->
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       <h5 class="card-title left blue" id="collocation"></h5>
                     </button>
-                    <button class="btn btn-link plus collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <!-- <button class="btn btn-link plus collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       <i class="fas fa-plus"></i>
-                    </button>
-                  </h2>
+                    </button> -->
                 </div>
               </div>
               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -210,26 +207,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <input type="checkbox" id="toggle-mode-cb" /> -->
-
-    <!--Hero Section-->
-    <div class="bg">
-      <!--Search bar-->
-      <!-- <div class="col-sm-12 search">
-        <h6 class="validation" id="validation">please press enter to search</h6>
-        <div class="input-group input-group-lg">
-          <input
-            type="text"
-            id="word-input"
-            class="form-control"
-            placeholder="type your word here"
-            aria-label="Sizing example input"
-          /><i class="fas fa-search"></i>
-        </div> -->
-    </div>
-
-    <!-- </div> -->
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
