@@ -78,7 +78,6 @@ $(document).ready(function() {
 
         // Adding collocations to page
       }).then(function(response) {
-
         $("#expander").append(
           `<div class="card-header">
           <h3">${"Collocations"}</h3>
@@ -89,7 +88,6 @@ $(document).ready(function() {
         );
 
         for (var i = 0; i < 10; i++) {
-
           var li = $("#collocation-result").append(`<li></li>`);
 
           $(li).append(`<h5 class="blue">${response[i].collocation}</h5>`);
@@ -100,29 +98,39 @@ $(document).ready(function() {
         }
       });
 
-      var thesQueryURL = "https://www.dictionaryapi.com/api/v3/references/thesaurus/json/" +
-      wordSearch +
-      "?key=234573cf-2356-4739-8b92-491ef64e1cbd";
+      var thesQueryURL =
+        "https://www.dictionaryapi.com/api/v3/references/thesaurus/json/" +
+        wordSearch +
+        "?key=234573cf-2356-4739-8b92-491ef64e1cbd";
 
       $.ajax({
-        url: thesQueryURL, 
+        url: thesQueryURL,
         method: "GET"
-      }).then(function(response){
+      }).then(function(response) {
         // console.log(response)
         for (var s = 0; s < 1; s++) {
           var lt = response;
 
-          $("#synonyms").append(
-            `<h5>${"Synonyms"}</h5>`
-          )
+          $("#synonyms").append(`<h5>${"Synonyms"}</h5>`);
 
           $("#synonyms-result").append(
             `<p class="card-text synonyms">${lt[s].meta.syns[0]}</p>`
-          )
+          );
         }
       });
-      
     }
+
+    // function renderRecents(list) {
+    //   $("#recent-result").empty();
+
+    //   for (var i = 0; i < list.length; i++) {
+    //     var recents = $("<p>");
+    //     recents.text(list[i]);
+
+    //     $("#recent-result").append(recents);
+    //   }
+    // }
+    // renderRecents(list);
   });
 
   // Selecting document and adding onclick function targetting the id
