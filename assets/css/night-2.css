@@ -261,3 +261,24 @@ svg.svg-inline--fa.fa-plus.fa-w-14 {
   background-color: #34323d;
   opacity: 1;
 }
+
+
+@media (max-width: 768px) {
+  label,
+.toggle {
+  height: 3rem;
+  border-radius: 100px;
+}
+
+label {
+    width: 160px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    margin-left:0;
+}
+  }
