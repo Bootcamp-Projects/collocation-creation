@@ -16,6 +16,13 @@ $(document).ready(function() {
         .val()
         .trim();
 
+      // Adding to session storage
+      $("#recent-result").text(wordSearch);
+
+      sessionStorage.setItem("recent results", wordSearch);
+
+      $("#recent-result").text(sessionStorage.getItem("recent results"));
+
       // API key: 56e8e2c7-0a6a-4cc2-8060-7e81c4e3e03
       var queryURL =
         "https://www.dictionaryapi.com/api/v3/references/learners/json/" +
@@ -28,7 +35,7 @@ $(document).ready(function() {
         method: "GET"
       }).then(function(response) {
         var el = response;
-        
+
         // Access the sound URL from the API
         var audio_link = `https://media.merriam-webster.com/soundc11/${wordSearch[0]}/${el[0].hwi.prs[0].sound.audio}.wav`;
 
@@ -52,7 +59,9 @@ $(document).ready(function() {
           ) {
             if (el[i].meta.stems[0] === wordSearch) {
               $("#def-coll").append(
-                `<p class="card-text">${i + 1}. (${el[i].fl}) ${el[i].shortdef[0]}</p>`
+                `<p class="card-text">${i + 1}. (${el[i].fl}) ${
+                  el[i].shortdef[0]
+                }</p>`
               );
             }
           }
@@ -78,7 +87,7 @@ $(document).ready(function() {
 
         // Adding collocations to page
       }).then(function(response) {
-
+        // $("#expander").empty();
         $("#expander").append(
           `<div class="card-header">
           <h3">${"Collocations"}</h3>
@@ -89,7 +98,6 @@ $(document).ready(function() {
         );
 
         for (var i = 0; i < 10; i++) {
-
           var li = $("#collocation-result").append(`<li></li>`);
 
           $(li).append(`<h5 class="blue">${response[i].collocation}</h5>`);
@@ -100,30 +108,30 @@ $(document).ready(function() {
         }
       });
 
-      var thesQueryURL = "https://www.dictionaryapi.com/api/v3/references/thesaurus/json/" +
-      wordSearch +
-      "?key=234573cf-2356-4739-8b92-491ef64e1cbd";
+      var thesQueryURL =
+        "https://www.dictionaryapi.com/api/v3/references/thesaurus/json/" +
+        wordSearch +
+        "?key=234573cf-2356-4739-8b92-491ef64e1cbd";
 
       $.ajax({
-        url: thesQueryURL, 
+        url: thesQueryURL,
         method: "GET"
-      }).then(function(response){
+      }).then(function(response) {
         // console.log(response)
         for (var s = 0; s < 1; s++) {
           var lt = response;
 
-          $("#synonyms").append(
-            `<h5>${"Synonyms"}</h5>`
-          )
+          $("#synonyms").append(`<h5>${"Synonyms"}</h5>`);
 
           $("#synonyms-result").append(
             `<p class="card-text synonyms">${lt[s].meta.syns[0]}</p>`
-          )
+          );
         }
       });
-      
     }
   });
+
+  
 
   // Selecting document and adding onclick function targetting the id
   $(document).on("click", ".sound", function() {
