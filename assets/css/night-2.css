@@ -28,6 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: background-color 0.1s;
+  border-radius: 0 0 30px 30px;
 }
 
 /* Main Circle */
