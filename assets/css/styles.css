@@ -51,6 +51,12 @@ h6 {
     
 }
 
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 100;
+}
+
 .blue {
     color: rgb(86, 185, 224);
 }
