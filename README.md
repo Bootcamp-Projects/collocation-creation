@@ -14,7 +14,7 @@ Authors:
 	• Christian Shaw
 
 Acknowledgements:
-	• Ihab Alzawee
+	• Ihab Alizzawi
 
 ## APIs used
 	1. Merriam Webster Learners Dictionary
