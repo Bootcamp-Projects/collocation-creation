@@ -1,5 +1,5 @@
 /* GENERAL */
-@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url("https://fonts.googleapis.com/css?family=Rubik");
 .credit {
   position: fixed;
   right: 2rem;
@@ -11,13 +11,12 @@
   color: inherit;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .body {
@@ -28,7 +27,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 }
 
 /* Main Circle */
@@ -36,30 +35,30 @@ body{
   width: 40rem;
   height: 40rem;
   border-radius: 100%;
-  background: linear-gradient(40deg, #FF0080,#FF8C00 70%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
   position: absolute;
   z-index: 1;
   left: 50%;
-  transform: translate(-50%, -70%)
+  transform: translate(-50%, -70%);
 }
 
 /* Top */
 .menu {
-/*   background-color: blue; */
+  /*   background-color: blue; */
   font-size: 80%;
-  opacity: .4;
-  padding: .8rem 1.8rem;
+  opacity: 0.4;
+  padding: 0.8rem 1.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .icons {
   display: flex;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 .battery {
-  width: .85rem;
-  height: .45rem;
+  width: 0.85rem;
+  height: 0.45rem;
   background-color: black;
 }
 .network {
@@ -69,7 +68,7 @@ body{
   border-width: 0 6.8px 7.2px 6.8px;
   border-color: transparent transparent black transparent;
   transform: rotate(135deg);
-  margin: .12rem .5rem;
+  margin: 0.12rem 0.5rem;
 }
 
 /* Middle */
@@ -77,38 +76,45 @@ body{
   display: flex;
   flex-direction: column;
   margin: auto;
-  width:100%;
+  width: 100%;
 }
 
-p { 
+p {
   font-size: 90%;
 }
 .heading {
   font-size: 140%;
   font-weight: bolder;
-  margin: 3rem 0 .2rem 0;
+  margin: 3rem 0 0.2rem 0;
 }
-label, .toggle {
+label,
+.toggle {
   height: 2.8rem;
   border-radius: 100px;
 }
 label {
-  width: 30%;
-  background-color: rgba(0,0,0,.1);
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100px;
   position: relative;
   cursor: pointer;
-  margin: 0 auto;
+  margin: 30px;
 }
 .toggle {
   position: absolute;
   width: 50%;
   background-color: #fff;
-  box-shadow: 0 2px 15px rgba(0,0,0,.15);
-  transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+label,
+.toggle {
+  height: 3.1rem;
+  border-radius: 100px;
+}
+
 .names {
-  font-size: 90%;
   font-weight: bolder;
   width: 65%;
   margin-left: 17.5%;
@@ -119,7 +125,7 @@ label {
   user-select: none;
 }
 .dark {
-  opacity: .5;
+  opacity: 0.5;
 }
 .mark {
   border-radius: 100px;
@@ -129,30 +135,30 @@ label {
   width: 7%;
   margin: auto;
   position: relative;
-  height: .25rem;
+  height: 0.25rem;
 }
 .mark::before {
-  content: '';
+  content: "";
   position: absolute;
-  width: .25rem;
+  width: 0.25rem;
   height: 100%;
   left: -70%;
-  opacity: .15;
+  opacity: 0.15;
   background-color: inherit;
 }
 .mark::after {
-  content: '';
+  content: "";
   position: absolute;
-  width: .25rem;
+  width: 0.25rem;
   height: 100%;
   right: -70%;
-  opacity: .15;
+  opacity: 0.15;
   background-color: inherit;
 }
 
 /* Bottom */
 .fab {
-  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 100%;
   width: 3rem;
   height: 3rem;
@@ -161,20 +167,20 @@ label {
   align-items: center;
   position: relative;
   cursor: pointer;
-  transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .fab:hover {
   transform: scale(1.2);
 }
 .arrow {
   width: 40%;
-  height: .1rem;
+  height: 0.1rem;
   background-color: black;
 }
 .arrow::before {
-  content: '';
+  content: "";
   position: absolute;
-  height: .1rem;
+  height: 0.1rem;
   width: 20%;
   background-color: inherit;
   transform: rotate(45deg);
@@ -182,9 +188,9 @@ label {
   top: 42%;
 }
 .arrow::after {
-  content: '';
+  content: "";
   position: absolute;
-  height: .1rem;
+  height: 0.1rem;
   width: 20%;
   background-color: inherit;
   transform: rotate(-45deg);
@@ -192,40 +198,66 @@ label {
   bottom: 42%;
 }
 
+/* -------- Icon Sizes ------------*/
+svg.svg-inline--fa.fa-sun.fa-w-16.light,
+svg.svg-inline--fa.fa-moon.fa-w-16.dark {
+  height: 1.5em;
+  margin-top: 6px;
+}
+.svg-inline--fa.fa-w-16 {
+  width: unset;
+}
+
+svg.svg-inline--fa.fa-plus.fa-w-14 {
+  float: right;
+  color:  rgb(86, 185, 224);
+  margin: 25px;
+}
 
 /* -------- Switch Styles ------------*/
 [type="checkbox"] {
   display: none;
 }
 /* Toggle */
-[type="checkbox"]:checked + .app .toggle{
+[type="checkbox"]:checked + .app .toggle {
   transform: translateX(100%);
-  background-color: #34323D;
+  background-color: #34323d;
 }
-[type="checkbox"]:checked + .app .dark{
+[type="checkbox"]:checked + .app .dark {
   opacity: 1;
 }
-[type="checkbox"]:checked + .app .light{
-  opacity: .5;
+[type="checkbox"]:checked + .app .light {
+  opacity: 0.5;
 }
 /* App */
-[type="checkbox"]:checked + .app .body{
-  background-color:  #26242E;
+[type="checkbox"]:checked + .app .body {
+  background-color: #26242e;
   color: white;
 }
+
+[type="checkbox"]:checked + .app .body .cls-4 {
+  fill: #ffffff;
+  color: #ffffff;
+}
+[type="checkbox"]:checked + .app .body .cls-5 {
+  fill: #ffffff;
+  color: #ffffff;
+}
+
+
 /* Fab */
-[type="checkbox"]:checked + .app .fab{
-  background-color: #34323D;
+[type="checkbox"]:checked + .app .fab {
+  background-color: #34323d;
 }
 [type="checkbox"]:checked + .app .arrow,
 [type="checkbox"]:checked + .app .mark,
-[type="checkbox"]:checked + .app .battery{
+[type="checkbox"]:checked + .app .battery {
   background-color: white;
 }
-[type="checkbox"]:checked + .app .network{
+[type="checkbox"]:checked + .app .network {
   border-color: transparent transparent white transparent;
 }
-[type="checkbox"]:checked + .app .swipe{
-  background-color: #34323D;
+[type="checkbox"]:checked + .app .swipe {
+  background-color: #34323d;
   opacity: 1;
 }

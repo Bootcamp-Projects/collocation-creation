@@ -25,85 +25,198 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
     />
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Nav -->
 
-  
-    <input type="checkbox" id="switch">
+    <input type="checkbox" id="switch" />
     <div class="app">
-    <div class="body">
-    
-      <div class="content">
+      <div class="body">
+        <div class="content">
+          <div class="col-sm-12 top-bar">
             <nav class="navbar navbar-dark">
-              <img src="assets/images/logo-dark.png" class="logo" />
+              <!-- <img src="assets/images/logo-dark.png" class="logo" /> -->
+              <svg
+                class="logo"
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 267 31.13"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                    }
+                    .cls-2 {
+                      clip-path: url(#clip-path);
+                    }
+                    .cls-3 {
+                      clip-path: url(#clip-path-2);
+                    }
+                    .cls-4,
+                    .cls-5 {
+                      fill: #34323d;
+                    }
+                    .cls-5 {
+                      font-size: 24px;
+                      font-family: HiraMinProN-W3-83pv-RKSJ-H,
+                        Hiragino Mincho ProN;
+                    }
+                    .cls-6 {
+                      clip-path: url(#clip-path-3);
+                    }
+                    .cls-7 {
+                      clip-path: url(#clip-path-5);
+                    }
+                    .cls-8 {
+                      clip-path: url(#clip-path-7);
+                    }
+                  </style>
+                  <clipPath id="clip-path" transform="translate(-111 -57)">
+                    <circle class="cls-1" cx="124.5" cy="79.5" r="3.5" />
+                  </clipPath>
+                  <clipPath id="clip-path-2" transform="translate(-111 -57)">
+                    <rect
+                      class="cls-1"
+                      x="58"
+                      y="-5"
+                      width="1024"
+                      height="1507"
+                    />
+                  </clipPath>
+                  <clipPath id="clip-path-3" transform="translate(-111 -57)">
+                    <circle class="cls-1" cx="130" cy="67" r="5" />
+                  </clipPath>
+                  <clipPath id="clip-path-5" transform="translate(-111 -57)">
+                    <circle class="cls-1" cx="135.5" cy="77.5" r="2.5" />
+                  </clipPath>
+                  <clipPath id="clip-path-7" transform="translate(-111 -57)">
+                    <circle class="cls-1" cx="118.5" cy="69.5" r="2.5" />
+                  </clipPath>
+                </defs>
+                <title>logo</title>
+                <g class="cls-2">
+                  <g class="cls-3">
+                    <rect class="cls-4" x="5" y="14" width="17" height="17" />
+                  </g>
+                </g>
+                <text class="cls-5" transform="translate(33.6 24)">
+                  Collocation Creation
+                </text>
+                <g class="cls-6">
+                  <g class="cls-3">
+                    <rect class="cls-4" x="9" width="20" height="20" />
+                  </g>
+                </g>
+                <g class="cls-7">
+                  <g class="cls-3">
+                    <rect class="cls-4" x="17" y="13" width="15" height="15" />
+                  </g>
+                </g>
+                <g class="cls-8">
+                  <g class="cls-3">
+                    <rect class="cls-4" y="5" width="15" height="15" />
+                  </g>
+                </g>
+              </svg>
             </nav>
-        <!-- <p class="heading">Choose a style</p> -->
-        <label for="switch">
-          <div class="toggle"></div>
-          <div class="names">
-            <p class="light">Light</p>
-            <p class="dark">Dark</p>
+            <label for="switch">
+              <div class="toggle"></div>
+              <div class="names">
+                <!-- <p class="light">Light</p> -->
+                <i class="far fa-sun light"></i>
+                <i class="far fa-moon dark"></i>
+                <!-- <p class="dark">Dark</p> -->
+              </div>
+            </label>
           </div>
-        </label>  
+          <!-- <p class="heading">Choose a style</p> -->
 
           <!--Search bar-->
-       <div class="col-sm-12 search">
-        <h6 class="validation" id="validation">please press enter to search</h6>
-        <div class="input-group input-group-lg">
-          <input
-            type="text"
-            id="word-input"
-            class="form-control"
-            placeholder="type your word here"
-            aria-label="Sizing example input"
-          /><i class="fas fa-search"></i>
+          <div class="col-sm-12 search">
+            <h6 class="validation" id="validation">
+              please press enter to search
+            </h6>
+            <div class="input-group input-group-lg">
+              <input
+                type="text"
+                id="word-input"
+                class="form-control"
+                placeholder="type your word here"
+                aria-label="Sizing example input"
+              /><i class="fas fa-search"></i>
+            </div>
+          </div>
+
+          <!--Search Results-->
+          <div class="container results">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="card-body" id="def-coll">
+                  <p class="card-text left" id="def-result"></p>
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div class="card-body">
+                  <h5 class="card-title left" id="synonyms"></h5>
+                  <p class="card-text word-click left" id="synonyms-result"></p>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="card-body">
+                  <!-- <h5 class="card-title left" id="collocation"></h5> -->
+                  <!-- <ul class="card-text left" id="collocation-result"></ul> -->
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card-body">
+                  <h5 class="card-title left" id="recent">Recent Search</h5>
+                  <p class="card-text left" id="recent-result"></p>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="accordion" id="accordionExample">
+              <div class="col-sm-12">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h5 class="card-title left blue" id="collocation"></h5>
+                    </button>
+                    <button class="btn btn-link plus collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </h2>
+                </div>
+              </div>
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="card-text left" id="collocation-result"></ul>
+                </div>
+              </div>
+            </div>
+            </div>
+           
+
+          </div>
         </div>
       </div>
-      
-      <!--Search Results-->
-      <div class="container results">
-        <div class="row">
-          <div class="col-sm-8">
-            <div class="card-body" id="def-coll">
-              <h6 class="type left" id="type">noun</h6>
-              <p class="card-text left" id="def-result"></p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card-body">
-              <h5 class="card-title left" id="synonyms"></h5>
-              <p class="card-text left" id="synonyms-result"></p>
-            </div>
-          </div>
-          <div class="col-sm-8">
-            <div class="card-body">
-              <h5 class="card-title left" id="collocation"></h5>
-              <ul class="card-text left" id="collocation-result"></ul>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card-body">
-              <h5 class="card-title left" id="recent">Recent Search</h5>
-              <p class="card-text left" id="recent-result"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      </div>
-  </div>
-</div>
-
+    </div>
 
     <!-- <input type="checkbox" id="toggle-mode-cb" /> -->
 
     <!--Hero Section-->
     <div class="bg">
-
-       <!--Search bar-->
-       <!-- <div class="col-sm-12 search">
+      <!--Search bar-->
+      <!-- <div class="col-sm-12 search">
         <h6 class="validation" id="validation">please press enter to search</h6>
         <div class="input-group input-group-lg">
           <input
@@ -114,15 +227,9 @@
             aria-label="Sizing example input"
           /><i class="fas fa-search"></i>
         </div> -->
-      </div>
-
-
-
-
     </div>
 
     <!-- </div> -->
-     
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

@@ -11,24 +11,54 @@ body {
       color: white;
   }
 
+  #synonyms-result {
+      width: 50px;
+  }
+
   .word-click {
       color:rgb(86, 185, 224);
       padding-left: 0;
-      font-size: 18px;
+      font-size: 16px;
+      display: flex;
   }
 
   h1 {
     color: white;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 h6 {
     color: #000000;
+    font-family: 'Sarabun', sans-serif;
+    font-style: italic;
+    
+}
+
+.blue {
+    color: rgb(86, 185, 224);
+}
+
+.top-bar {
+    display: flex;
 }
 
 .navbar {
     padding: 30px;
     width: 100%;
-    margin: 10px 40px;
+    margin: 30px 40px;
 }
 
 .logo {
@@ -51,15 +81,28 @@ h6 {
     top: -35px;
 }
 
-  h6 {
-    color: rgba(255, 255, 255, 0.9);
-    font-family: 'Sarabun', sans-serif;
-    font-style: italic;
-  }
-
+ 
   /* .nav {
       background-color: #34323D;
   } */
+
+  #collapseOne {
+    padding: 0px 30px;
+    margin-top: 0px;
+  }
+
+  .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    border: 1px solid rgb(86, 185, 224);
+    text-decoration: none;
+    border-radius: 10px;
+    background: none;
+  }
+
+  .plus {
+      float: right;
+  }
   
   .left, p.card-text, h2.card-title {
     text-align: left;
@@ -71,7 +114,7 @@ h6 {
   }
   
   .card-body {
-      margin-top:30px;
+      margin-top:10px;
   }
 
   .bg {
@@ -160,6 +203,10 @@ input#word-input {
     border: none;
 }
 
+#synonyms-result, .synonyms {
+    word-break: break-all;
+    width:100%;
+}
 
 
 

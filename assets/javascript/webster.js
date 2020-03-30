@@ -4,7 +4,9 @@ $(document).ready(function() {
       event.preventDefault();
       $("#def-coll").empty();
       $("#collocation-result").empty();
+      $("#collocation").empty();
       $("#synonyms-result").empty();
+      $("#synonyms").empty();
       $([document.documentElement, document.body]).animate(
         { scrollTop: $("#collocation").offset().top },
         800
@@ -78,17 +80,17 @@ $(document).ready(function() {
       }).then(function(response) {
 
         $("#collocation").append(
-          `<h5>${"Collocations"}</h5>`
+          `<h3>${"Collocations"}</h3>`
         );
 
         for (var i = 0; i < 10; i++) {
 
           var li = $("#collocation-result").append(`<li></li>`);
 
-          $(li).append(`<h5>${response[i].collocation}</h5>`);
+          $(li).append(`<h5 class="blue">${response[i].collocation}</h5>`);
 
           response[i].examples.forEach(function(val) {
-            $(li).append(`<p>${val}</p>`);
+            $(li).append(`<p>${val}</p><br>`);
           });
         }
       });
@@ -110,7 +112,7 @@ $(document).ready(function() {
           )
 
           $("#synonyms-result").append(
-            `<p class="card-text word-click col-sm-4">${lt[s].meta.syns[0]}</p>`
+            `<p class="card-text synonyms">${lt[s].meta.syns[0]}</p>`
           )
         }
       });
