@@ -28,6 +28,7 @@ $(document).ready(function() {
         method: "GET"
       }).then(function(response) {
         var el = response;
+        console.log(response);
 
         // Access the sound URL from the API
         var audio_link = `https://media.merriam-webster.com/soundc11/${wordSearch[0]}/${el[0].hwi.prs[0].sound.audio}.wav`;
@@ -52,7 +53,7 @@ $(document).ready(function() {
           ) {
             if (el[i].meta.stems[0] === wordSearch) {
               $("#def-coll").append(
-                `<p class="card-text">${i + 1}. ${el[i].shortdef[0]}</p>`
+                `<p class="card-text">${i + 1}. (${el[i].fl}) ${el[i].shortdef[0]}</p>`
               );
             }
           }
