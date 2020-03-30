@@ -76,7 +76,13 @@ $(document).ready(function() {
 
         // Adding collocations to page
       }).then(function(response) {
+
+        $("#collocation").append(
+          `<h5>${"Collocations"}</h5>`
+        );
+
         for (var i = 0; i < 10; i++) {
+
           var li = $("#collocation-result").append(`<li></li>`);
 
           $(li).append(`<h5>${response[i].collocation}</h5>`);
@@ -99,8 +105,12 @@ $(document).ready(function() {
         for (var s = 0; s < 1; s++) {
           var lt = response;
 
+          $("#synonyms").append(
+            `<h5>${"Synonyms"}</h5>`
+          )
+
           $("#synonyms-result").append(
-            `<p class="card-text word-click col-sm-4 p0">${lt[s].meta.syns[0]}</p>`
+            `<p class="card-text word-click col-sm-4">${lt[s].meta.syns[0]}</p>`
           )
         }
       });
