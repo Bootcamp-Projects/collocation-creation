@@ -12,16 +12,23 @@ $(document).ready(function() {
         800
       );
 
-      var wordSearch = $("#word-input")
-        .val()
-        .trim();
+      // var wordSearch = $("#word-input")
+      //   .val()
+      //   .trim();
+      // // searchList.push(wordSearch);
+      // // Adding to session storage
+      // $("#recent-result").text(wordSearch);
+      // localStorage.setItem(wordSearch,  wordSearch);
+      // $("#recent-result").text(localStorage.getItem("recentResults"));
+      // for (var key in localStorage) {
+      //   if (key === "getItem" || key === "setItem" || key === "removeItem" || key === "clear" || key === "length"|| key === "key") {
+      //     return null;
+      //   }
+      //  var ul = $("#recent-result").append("<ul></ul>");
+      //  ul.append(`<li>${key}</li>`);
+      
+      // };
 
-      // Adding to session storage
-      $("#recent-result").text(wordSearch);
-
-      sessionStorage.setItem("recent results", wordSearch);
-
-      $("#recent-result").text(sessionStorage.getItem("recent results"));
 
       // API key: 56e8e2c7-0a6a-4cc2-8060-7e81c4e3e03
       var queryURL =
@@ -87,7 +94,7 @@ $(document).ready(function() {
 
         // Adding collocations to page
       }).then(function(response) {
-        // $("#expander").empty();
+        
         $("#expander").append(
           `<div class="card-header">
           <h3">${"Collocations"}</h3>
@@ -130,8 +137,6 @@ $(document).ready(function() {
       });
     }
   });
-
-  
 
   // Selecting document and adding onclick function targetting the id
   $(document).on("click", ".sound", function() {
