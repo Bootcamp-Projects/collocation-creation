@@ -1,4 +1,5 @@
 # collocation-creation
+A dictionary/thesaurus application for learners of the English language which helps with collocations.
 
 ## Instructions
 	1. Type the word you want to search in the search bar.
