@@ -12,22 +12,22 @@ $(document).ready(function() {
         800
       );
 
-      // var wordSearch = $("#word-input")
-      //   .val()
-      //   .trim();
-      // // searchList.push(wordSearch);
-      // // Adding to session storage
-      // $("#recent-result").text(wordSearch);
-      // localStorage.setItem(wordSearch,  wordSearch);
-      // $("#recent-result").text(localStorage.getItem("recentResults"));
-      // for (var key in localStorage) {
-      //   if (key === "getItem" || key === "setItem" || key === "removeItem" || key === "clear" || key === "length"|| key === "key") {
-      //     return null;
-      //   }
-      //  var ul = $("#recent-result").append("<ul></ul>");
-      //  ul.append(`<li>${key}</li>`);
+      var wordSearch = $("#word-input")
+        .val()
+        .trim();
+      // searchList.push(wordSearch);
+      // Adding to session storage
+      $("#recent-result").text(wordSearch);
+      localStorage.setItem(wordSearch,  wordSearch);
+      $("#recent-result").text(localStorage.getItem("recentResults"));
+      for (var key in localStorage) {
+        if (key === "getItem" || key === "setItem" || key === "removeItem" || key === "clear" || key === "length"|| key === "key") {
+          return null;
+        }
+       var ul = $("#recent-result").append("<ul></ul>");
+       ul.append(`<li>${key}</li>`);
       
-      // };
+      };
 
 
       // API key: 56e8e2c7-0a6a-4cc2-8060-7e81c4e3e03
