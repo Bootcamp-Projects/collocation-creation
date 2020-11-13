@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#word-input").on("keypress", function(event) {
+    
     if (event.which === 13) {
       event.preventDefault();
       $("#def-coll").empty();
@@ -11,11 +12,11 @@ $(document).ready(function() {
         { scrollTop: $("#collocation").offset().top },
         800
       );
+      
 
       var wordSearch = $("#word-input")
         .val()
         .trim();
-      // searchList.push(wordSearch);
       // Adding to session storage
       $("#recent-result").text(wordSearch);
       localStorage.setItem(wordSearch,  wordSearch);
@@ -42,6 +43,7 @@ $(document).ready(function() {
         method: "GET"
       }).then(function(response) {
         var el = response;
+        console.log(response);
 
         // Access the sound URL from the API
         var audio_link = `https://media.merriam-webster.com/soundc11/${wordSearch[0]}/${el[0].hwi.prs[0].sound.audio}.wav`;
