@@ -32,10 +32,6 @@ body {
 }
 
 
-input#word-input {
- color: #ffffff;
-}
-
 /* Main Circle */
 .main-circle {
   width: 40rem;
