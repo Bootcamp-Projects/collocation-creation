@@ -1,6 +1,7 @@
 $(document).ready(function() {
   
   $("#word-input").on("keypress", function(event) {
+    
     if (event.which === 13) {
       event.preventDefault();
       // $("#expander").empty();
@@ -14,17 +15,24 @@ $(document).ready(function() {
         { scrollTop: $("#collocation").offset().top },
         800
       );
+      
 
       var wordSearch = $("#word-input")
         .val()
         .trim();
-
       // Adding to session storage
       $("#recent-result").text(wordSearch);
+      localStorage.setItem(wordSearch,  wordSearch);
+      $("#recent-result").text(localStorage.getItem("recentResults"));
+      for (var key in localStorage) {
+        if (key === "getItem" || key === "setItem" || key === "removeItem" || key === "clear" || key === "length"|| key === "key") {
+          return null;
+        }
+       var ul = $("#recent-result").append("<ul></ul>");
+       ul.append(`<li>${key}</li>`);
+      
+      };
 
-      sessionStorage.setItem("recent results", wordSearch);
-
-      $("#recent-result").text(sessionStorage.getItem("recent results"));
 
       // API key: 56e8e2c7-0a6a-4cc2-8060-7e81c4e3e03
       var queryURL =
@@ -38,6 +46,7 @@ $(document).ready(function() {
         method: "GET"
       }).then(function(response) {
         var el = response;
+        console.log(response);
 
         // Access the sound URL from the API
         var audio_link = `https://media.merriam-webster.com/soundc11/${wordSearch[0]}/${el[0].hwi.prs[0].sound.audio}.wav`;
@@ -90,10 +99,11 @@ $(document).ready(function() {
 
         // Adding collocations to page
       }).then(function(response) {
-
+        
         // var expand=$("#expander").append();
         $(".collocation-box").empty();
         $(".collocation-box").append(
+          
           `<div class="card-header">
           <h3">Collocations</h3>
           <button class="btn btn-link plus collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -135,8 +145,6 @@ $(document).ready(function() {
       });
     }
   });
-
-  
 
   // Selecting document and adding onclick function targetting the id
   $(document).on("click", ".sound", function() {
