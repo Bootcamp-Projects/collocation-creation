@@ -1,12 +1,15 @@
 $(document).ready(function() {
+  
   $("#word-input").on("keypress", function(event) {
     if (event.which === 13) {
       event.preventDefault();
+      // $("#expander").empty();
       $("#def-coll").empty();
       $("#collocation-result").empty();
       $("#collocation").empty();
       $("#synonyms-result").empty();
       $("#synonyms").empty();
+      
       $([document.documentElement, document.body]).animate(
         { scrollTop: $("#collocation").offset().top },
         800
@@ -87,10 +90,12 @@ $(document).ready(function() {
 
         // Adding collocations to page
       }).then(function(response) {
-        // $("#expander").empty();
-        $("#expander").append(
+
+        // var expand=$("#expander").append();
+        $(".collocation-box").empty();
+        $(".collocation-box").append(
           `<div class="card-header">
-          <h3">${"Collocations"}</h3>
+          <h3">Collocations</h3>
           <button class="btn btn-link plus collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           <i class="fas fa-plus"></i>
           </button>
