@@ -17,6 +17,16 @@ Authors:
 Acknowledgements:
 	• Ihab Alizzawi
 
+## Tech used
+	• HTML/CSS
+	• JavaScript
+	• REST API
+	• Bootstrap 4
+	• Google Fonts
+	• jQuery
+	• AJAX
+	• JSON
+
 ## APIs used
 	1. Merriam Webster Learners Dictionary
 	2. Merriam Webster Collegiate Thesaurus
