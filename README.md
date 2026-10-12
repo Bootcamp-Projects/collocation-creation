@@ -7,6 +7,10 @@ A dictionary/thesaurus application for learners of the English language which he
 	3. Click the 'Day/Night' toggle to switch from daylight mode to night mode.
 
 
+## Run it locally
+Clone the repository and open `index.html` in a browser. There is no build step.
+
+
 ## Author and Acknowledgement
 Authors:
 	• Zach Ledford
